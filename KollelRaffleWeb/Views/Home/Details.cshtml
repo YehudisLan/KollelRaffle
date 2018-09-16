@@ -1,0 +1,40 @@
+﻿@using KollelRaffleWeb.Data
+@model Entry
+
+<div class="container">
+    <table class="table table-bordered table-striped" style="color:blue; border:solid;">
+        <tr style="color:blue; border-width:thick;">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Number</th>
+            <th>Adress</th>
+            <th>Sheitel</th>
+            <th>Cash</th>
+            <th>Total</th>
+            <th>Paid By:</th>
+            <th>Message</th>
+        </tr>
+        <tr style="color:blue; border:solid;">
+            <td>@Model.name</td>
+            <td>@Model.Date</td>
+            <td>@Model.Number</td>
+            <td>@Model.StreetAddress @Model.CityState</td>
+            <td>@(Model.Sheitel + (Model.SheitelBulk * 6))</td>
+            <td>@(Model.Cash + (Model.CashBulk * 3))</td>
+            <td>@Model.Total</td>
+            @if (Model.Payment == 1)
+            {
+                <td>@Payment.Credit</td>
+            }
+            else
+            {
+                <td>@Payment.Check</td>
+            }
+            <td>@Model.InHonorOf</td>
+    </table>
+    <div class="col-md-10">
+        <a class="btn col-md-offset-6" href="/home/admin" style="color:white;background-color:blue;">View All</a>
+    </div>
+</div>
+
+

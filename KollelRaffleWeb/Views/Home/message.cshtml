@@ -1,0 +1,29 @@
+﻿@using KollelRaffleWeb.Data
+@using KollelRaffleWeb.Models
+@model MessageViewer
+
+<div class="container">
+    <div class="alert " role="alert"  style="background-color:blue;color:white;border:solid;color:lightblue; width:400px; text-align:center;">Thank you for your order of $@Model.total!</div>   
+ @if(Model.Payment == Payment.Credit)
+    {
+        <h3>Please click below to process your credit card payment:</h3>
+    <a href="https://secure.cardknox.com/kollellomdeishas" style="color:blue;background-color:lightblue; width:500px;">
+    <h3>secure.cardknox.com/kollellomdeishas</h3>
+    </a>
+        
+    }
+
+    else
+    {
+       <h4>Tax deductible checks can be made payable and sent to: </h4>
+    <h4>Cong. Kollel Lomdei Shas</h4><h4>6 Demarest Road</h4> 
+    <h4>Spring Valley, NY 10977</h4>
+    <h4 style="color:red;">*Please mail your check today so we can process your order.</h4>
+    }
+    <br />  
+    <div class="btn" style="background-color:blue;color:white;border:solid;color:lightblue;width:400px;" >
+        Tizku Limitzvos!
+    </div>   
+   
+</div>
+

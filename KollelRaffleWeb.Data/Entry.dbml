@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KLS" Class="EntryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\MSSMLBIZ;Initial Catalog=KLS;Integrated Security=True" SettingsObjectName="KollelRaffleWeb.Data.Properties.Settings" SettingsPropertyName="KLSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Entries" Member="Entries">
+    <Type Name="Entry">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityState" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sheitel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cash" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Payment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SheitelBulk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CashBulk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InHonorOf" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

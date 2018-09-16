@@ -1,0 +1,26 @@
+﻿@using KollelRaffleWeb.Data
+@model IEnumerable<Entry>
+
+<div class="container">
+    <table class="table table-bordered table-striped" style="border:solid;color:blue;">
+        <tr style="color:blue; border:solid;">
+            <th>Name</th>
+            <th>Number</th>
+            <th>Adress</th>
+            <th>Total</th>
+            <th>Details</th>
+        </tr>
+        @foreach (Entry e in Model)
+        {
+            <tr style="color:blue; border-width:thick;">
+                <td>@e.name</td>
+                <td>@e.Number</td>
+                <td>@e.StreetAddress</td>
+                <td>@e.Total</td>
+                <td><a href="/home/details?id=@e.Id" class="btn" style="background-color:blue;color:white;">View Details</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
+
